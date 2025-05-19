@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/team-divider-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <title>Team Divider</title>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="inner">
+            <h1>Team Divider</h1>
+            <nav>
+                <ul class="header-nav">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="#howto-detail">使い方</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- ヘッダー end -->
+
+    <!-- 大まかな使い方 -->
+    <section class="howto">
+        <div class="inner">
+            <div class="howto-wrapper">
+                <p>このツールは、参加者の名前を入力してチーム数を選ぶだけで、ランダムにチームを分けられる便利なツールです。</p>
+            </div>
+        </div>
+    </section>
+    <!-- 大まかな使い方 end -->
+
+    <!-- メイン -->
+    <main>
+        <div class="inner">
+            <form method="post" id="team-form">
+                <div class="main-flex">
+                    <div class="form-group">
+                        <label for="entrant">参加者</label>
+                        <div class="input-wrapper">
+                            <textarea name="entrant" id="entrant" placeholder="1行ずつ名前を入力"></textarea>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                            <label for="num-of-team">チーム数</label>
+                                <div class="input-wrapper">
+                                    <select name="numOfteam" id="num-of-team">
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                    </div>
+                </div>
+                <button type="button" id="divider-btn" onclick="DivideTeams()">チーム分け開始</button>
+            </form>
+        </div>
+    </main>
+    <!-- メイン end -->
+
+    <!-- 詳細な使い方 -->
+    <section class="howto-detail" id="howto-detail">
+        <div class="inner">
+            <div class="howtodetail-wrapper">
+                <h4>詳しい使い方</h4>
+                <p>1行に1人ずつ名前を入力し、チーム数を選んで「チーム分け開始」を押してください。結果は下に表示されます。</p>
+            </div>
+        </div>
+    </section>
+    <!-- 詳細な使い方 end -->
+
+    <!-- 結果表示 -->
+    <aside>
+        <div class="inner">
+            <div id="result-title"></div>
+            <div id="result">
+                
+            </div>
+        </div>
+    </aside>
+    <!-- 結果表示 end -->
+    
+    <!-- フッター -->
+    <footer>
+        <div class="inner">
+            <div class="footer-content">
+                <div class="footer-credits">
+                    <p>&copy; 2025 Team Divider. All rights reserved.</p>
+                </div>
+                <div class="footer-owner">
+                    <p>Created by Hiroki Itou</p>
+                </div>
+                <div class="footer-contact">
+                    <p>ご意見・お問い合わせは <a href="mailto:example@example.com">こちら</a> まで。</p>
+                </div>
+                <div class="footer-note">
+                    <p>※このツールの使用による損害については責任を負いかねます。自己責任でご利用ください。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- フッター end -->
+
+<script src="js/jquery.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

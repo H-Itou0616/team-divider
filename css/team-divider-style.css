@@ -1,0 +1,249 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f5f5f5;
+    color: #111;
+}  
+
+.inner{
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* ヘッダー＆ナビ */
+header{
+    margin-bottom: 50px;
+}
+
+header h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav ul{
+    background-color: #222;
+    line-height: 2rem;
+    border-radius: 2px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #ccc;
+    font-size: 18px;
+    padding: 2px 20px;
+    transition: all 0.2s;
+}
+
+nav ul li a:hover{
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* ヘッダー＆ナビ end */
+
+/* 使い方 */
+.howto{
+    margin-bottom: 10px;
+}
+
+.howto-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.howto-wrapper p{
+    max-width: 98%;
+}
+
+.howto-detail{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.howtodetail-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.howtodetail-wrapper h4,.howtodetail-wrapper p{
+    max-width: 98%;
+}
+
+.howtodetail-wrapper h4{
+    align-self: flex-start;
+    padding-left: 1%;
+}
+/* 使い方 end */
+
+/* メイン */
+main{
+    padding-top: 30px;
+}
+
+form{
+    text-align: center;
+}
+
+.main-flex{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.form-group{
+    width: 300px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+label{
+    display: block;
+    /* font-weight: bold; */
+    margin-bottom: 0.5rem;
+    font-size: 18px;
+}
+
+textarea{
+    width: 100%;
+    height: 150px;
+    resize: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+
+main select{
+    width: 100px;
+    height: 30px;
+    font-size: 1rem;
+}
+
+textarea, select{
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#divider-btn{
+    /* width: 100%; */
+    padding: 0.75rem 1.5rem;
+    font-size: 18px;
+    background-color: #fff;
+    color: #222;
+    border: 2px solid #222;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#divider-btn:hover{
+    background-color: #222;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.7);
+}
+/* メイン end */
+
+/* 結果表示 */
+#result-title h3{
+    text-align: center;
+    margin-top: 50px;
+    padding:10px 0 10px 0;
+    background-color: #222;
+    color: #ccc;
+    border-radius: 2px;
+}
+
+#result{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team{
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 1rem;
+}
+
+.team h3{
+    text-align: center;
+}
+
+.team ul{
+    list-style: none;
+    padding: 0.5rem;
+}
+
+.spectator{
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 1rem;
+
+}
+
+.spectator h3{
+    text-align: center;
+}
+
+.spectator ul{
+    list-style: none;
+    padding: 0.5rem;
+}
+/* 結果表示 end */
+
+/* フッター */
+footer{
+    background-color: #fff;
+}
+.footer-content{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* フッター end */
+
+@media screen and (max-width:768px){
+    .main-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group{
+        width: 90%;
+    }
+
+    #divider-btn{
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    #result{
+        flex-direction: column;
+        align-items: center;
+    }
+}
